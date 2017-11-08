@@ -1,0 +1,345 @@
+body {
+    background: #2f323b;
+    font-family: 'Roboto', sans-serif;
+    color: #949ba2;
+}
+.panel-heading{
+  margin-top: 80px;
+}
+/*Style Of top Navbar*/
+#navbar{
+ margin-top:2%;
+ position: relative;
+ z-index: 99;
+}
+.navbar-fixed-top{
+  height:100px;
+}
+#navbar a{
+ font-size:2.1vmax;
+ color: white;
+ font-weight: 600;
+ margin-left: 10%;
+}
+/*the hover effect on the navbar*/
+#navbar a:hover{
+ color: #b7b7b7;
+}
+
+.dropdown-menu{
+  background-color: black;
+}
+.dropdown-menu li a{
+  background-color: black;
+}
+
+#navbar .dropdown-menu a:hover{
+  background: rgba(0,0,0,0);
+}
+#navbar .dropdown-menu a{
+  font-size: 12px;
+  padding-left:35px;
+}
+/*Image size of the top left round photo in the sidebar*/
+#img_logo_trainer{
+  position: absolute;
+  left:-5px;
+  width:270px;
+  height:90px;
+}
+
+.row {
+  margin: 30px;
+}
+.font-bold {
+    font-weight: 600;
+}
+.c-white, h3 {
+    color: #FFFFFF;
+}
+
+.panel {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #949ba2;
+    border-radius: 3px;
+}
+
+.panel .panel-body {
+    padding: 5px 15px 15px 15px;
+}
+
+.panel.panel-filled .panel-body {
+    padding-top: 10px;
+}
+
+.panel .panel-footer {
+    background-color: transparent;
+    border: none;
+}
+
+.panel > .panel-heading {
+    color: #ffffff;
+}
+
+.panel-tools {
+    display: inline-block;
+    float: right;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+}
+
+.panel-tools a {
+    margin-left: 2px;
+    color: #949ba2;
+    cursor: pointer;
+}
+
+.panel-tools a:hover {
+    color: #ffffff;
+}
+
+.panel.panel-c-white {
+    border-left: 3px solid #949ba2;
+}
+
+.panel.panel-c-accent {
+    border-left: 3px solid #f6a821;
+}
+
+.panel.panel-c-primary {
+    border-left: 3px solid #0F83C9;
+}
+
+.panel.panel-c-warning {
+    border-left: 3px solid #f7af3e;
+}
+
+.panel.panel-c-info {
+    border-left: 3px solid #56C0E0;
+}
+
+.panel.panel-c-success {
+    border-left: 3px solid #1bbf89;
+}
+
+.panel.panel-c-danger {
+    border-left: 3px solid #DB524B;
+}
+
+.panel.panel-b-accent {
+    background-color: #f6a821;
+    color: #ffffff;
+}
+
+.panel.panel-b-white {
+    background-color: white;
+    color: #61686f;
+}
+
+.panel.panel-b-white .panel-heading {
+    color: #61686f;
+}
+
+.panel.panel-b-white .panel-footer {
+    color: #61686f;
+}
+
+.panel.panel-filled {
+    background-color: rgba(68, 70, 79, 0.5);
+}
+
+.support-question a {
+    color: #949ba2;
+}
+
+.support-question a:hover {
+    text-decoration: none;
+}
+
+.support-question a:focus {
+    text-decoration: none;
+}
+
+.support-question:hover {
+    background-color: rgba(68, 70, 79, 0.7);
+}
+
+.support-question.active {
+    border-left: 3px solid #f6a821;
+}
+
+.support-question.active .panel-body {
+    padding-left: 13px;
+}
+.panel-group ul{
+  -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+/*End of the Customization of Animation*/
+/*To Customize the animation and give them a name*/
+.tab-content{
+  -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-name: popout;
+    animation-name: popout;
+}
+@keyframes popout {
+    from{transform:scale(0)}
+    80%{transform:scale(1.2)}
+    to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.2)}
+    to{-webkit-transform:scale(1)}
+}
+.popout {
+  animation-name: popout;
+}
+/*Style of Footer*/
+footer {
+  width:100%;
+  background-color:black;
+  position:absolute;
+}
+
+.footer-main{
+  margin-left:-8%;
+}
+.footerbrand a{
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+}
+.footerbrand a:hover{
+  text-decoration: none;
+  color: white;
+}
+.footerbrand a:active{
+  text-decoration: none;
+  color: #fffbb2;
+}
+.footerbrand a:visited {
+  text-decoration: none;
+}
+.footerlink{
+  position: absolute;
+  color: white;
+  left: 35%;
+  font-size: 20px;
+  font-weight: 300;
+}
+.footerlink a{
+  color:white
+}
+.footerlink a:hover{
+  text-decoration: none;
+  color: yellow;
+}
+.footerlink a:active{
+  text-decoration: none;
+  color: #fffbb2;
+}
+.footerlink a:visited {
+  text-decoration: none;
+}
+.socialbtn{
+  position: absolute;
+  left: 90%;
+}
+.socialbtn .btn-social-icon{
+  background-color:yellow;
+  color:black;
+}
+
+.socialbtn .btn-social-icon:hover{
+  color:grey;
+}
+
+.socialbtn .btn-social-icon:active {
+  background-color:black;
+}
+
+/*Custom screen size to make the css responsive manually*/
+@media (max-width: 768px) {
+    #img_logo_trainer{
+      z-index: 99;
+    }
+    .footer-main{
+      margin-left: 3%;
+    }
+    .footerlink{
+      left: 35%;
+    }
+    .socialbtn{
+      position: absolute;
+      left: 80%;
+    }
+
+}
+@media (max-width: 540px) {
+  .footerlink{
+    left: 30%;
+  }
+}
+@media (max-width: 440px) {
+  .footerlink{
+    left: 25%;
+  }
+}
+@media (max-width: 402px) {
+  div .btn-social-icon{
+    width: 25px;
+    height: 25px;
+    font-size: 2vmax;
+  }
+  .footerlink{
+    top:41%;
+    left:36%;
+    font-size:2vmax;
+  }
+  .socialbtn{
+    left: 80%;
+  }
+  .btn-facebook{
+    margin-left: -8px;
+  }
+  .fa-facebook{
+    margin-top: -18%;
+  }
+  .fa-instagram{
+    margin-top: -18%;
+  }
+}

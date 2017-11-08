@@ -1,0 +1,21 @@
+------------------------------------BIT210 Web Programming Assignment 2 -------------------------------------------  
+
+							This is the first version of the BIT210 Assignment 2,
+							it concist of two folder, the Bit210 Assignment 2 final 
+							version and the Mysql file and installation zip together.
+
+							1- Download the zip file from the given link on google 
+							drive:
+
+							2- On zip the downloaded file to your root directery 
+							HTDOCS if you are using xampp or WWWW if you are using
+							Wampp server.
+
+							3- Run your Appachy server and your Mysql server
+
+							4- Open in your browser the PHPMMYADMIN create a database 
+							named helpFit and then import the database file helpfit.sql.
+
+							
+
+

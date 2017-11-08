@@ -1,0 +1,773 @@
+/*to set the navbar color to transparent
+*/
+html, body {
+    padding:0;
+    margin:0;
+}
+.nav-color{
+  background-color: rgba(0,0,0,0);
+  height: 60px;
+  border-bottom: 0px;
+  transition: background-color .5s ease 0s;
+}
+/*when scrolling down to the pixels set on data-offset-top
+ *this css style will then change the navbar color to black
+*/
+.affix.navbar{
+ background-color: black;
+ transition: background-color .5s ease 0s;
+ }
+/*
+ button.navbar-toggle{
+     border-color: #ffffff;
+ }
+ */
+ button.navbar-toggle span{
+   background:#ffffff;/*change accordingly*/
+
+   // these span are for white line you can edit the lines in this css
+}
+
+nav .navbar-nav li a {
+    color:#b7b7b7;
+    opacity: 0.6;
+}
+
+.navbar-brand{
+  color:#b7b7b7;
+  opacity: 0.6;
+}
+
+.navbar-brand:hover {
+    color:white;
+    background-color: rgba(0,0,0,0);
+    opacity: 1;
+}
+nav .navbar-nav li a:hover {
+    color:white;
+    background-color: rgba(0,0,0,0);
+    opacity: 1;
+}
+
+#firstbg{
+  position: relative;
+    z-index: 1;
+}
+
+a #img_logo{
+  position: absolute;
+  z-index: 2;
+  top:15vh;
+  left:38vw;
+  width: 22vw;
+  height: auto;
+}
+/*This is the third section of the home page
+ *To make the background color of the section to black
+*/
+#third_section_container{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/*In order to split the 2 colors of rectangle to diagonal
+ * the rotation is implemented and put yellow color
+ * vw --> 100% of the width of the viewport
+ * vh --> 100% of the height of the viewport
+*/
+#third_section_container::before{
+
+  content:'';
+  border-top: 100vh solid transparent;
+  border-right: 100vw solid yellow;
+  width: 0;
+  position: absolute;
+
+}
+
+#third_section_caption{
+  color: yellow;
+  letter-spacing: 6px;
+  font: bold 8vmax arial;
+  top: 20vh;
+}
+
+#third_section_caption2{
+  color: black;
+  letter-spacing: 6px;
+  text-shadow: 2px 3px #474747, 4px 4px #6b6b6b, 6px 5px #8c8c8c,
+  8px 6px #a0a0a0, 10px 7px #afafaf, 12px 8px #c6c6c6, 14px 9px #e2e2e2,
+  16px 10px white;
+  font: bold 8vmax arial;
+  top: 55vh;
+}
+/*Pop Effect*/
+.popEffect{
+	display: inline;
+	text-indent: 19px;
+}
+
+.popEffect span{
+	animation: pop 12.5s linear infinite 0s;
+	-ms-animation: pop 12.5s linear infinite 0s;
+	-webkit-animation: pop 12.5s linear infinite 0s;
+	color: #ffffff;
+  text-shadow: 2px 3px #e2e2e2, 4px 4px #b5b5b5, 6px 5px #8c8c8c, 8px 6px grey;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.popEffect span:nth-child(2){
+	animation-delay: 2.5s;
+	-ms-animation-delay: 2.5s;
+	-webkit-animation-delay: 2.5s;
+}
+.popEffect span:nth-child(3){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+.popEffect span:nth-child(4){
+	animation-delay: 7.5s;
+	-ms-animation-delay: 7.5s;
+	-webkit-animation-delay: 7.5s;
+}
+.popEffect span:nth-child(5){
+	animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	-webkit-animation-delay: 10s;
+}
+/*To customize the animation effect*/
+/*Pop Effect Animation*/
+@-moz-keyframes pop{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: rotate(0deg) scale(0.10) skew(0deg) translate(0px); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(0px); }
+	80% { opacity: 0; }
+	100% { opacity: 0;}
+}
+@-webkit-keyframes pop{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: rotate(0deg) scale(0.10) skew(0deg) translate(0px);}
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(0px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes pop{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: rotate(0deg) scale(0.10) skew(0deg) translate(0px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(0px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+/*To call the animation and set the timing */
+.bounce-in-up-animation{
+-webkit-animation-duration: 0.01s;
+  animation-duration: 0.01s;
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+/*Bounce in and up animation */
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: linear;
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/*To name the customized animation*/
+.bounceInUp {
+  animation-name: bounceInUp;
+}
+
+/* Style the back-to-top button at the bottom right corner of the page */
+.scroll_top {
+    background-color: #50A1CB; /* button color */
+    color: white; /* text/arrow color */
+    display: none;
+    z-index: 999;
+    /* float in bottom right corner */
+    /* 20 pixels from edge */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* size of button is 50 pixels*/
+    width: 50px;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* round button */
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+a.scroll_top {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 2px;
+    padding-top: 4px;
+}
+
+/* General button effect style (reset) */
+.btn-effect {
+   outline: none;
+   position: relative;
+     box-shadow: 0 9px #999;
+     font-size: 24px;
+     text-align: center;
+     cursor: pointer;
+     top:62vh;
+}
+/* General button effect Icon behavior/style */
+
+
+.btn-effect.btn-lg .icon {
+   line-height: 2.5;
+   font-size: 100%;
+}
+
+
+/* Button 5 */
+.btn-effect5 {
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+  position: relative;
+}
+
+.btn-effect5:active {
+	background: #d1d1d1;
+
+
+}
+
+.btn-effect5:active .icon {
+    color: #d1d1d1;
+
+}
+
+.btn-effect5:hover span.text {
+  -webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.btn-effect5 span.text {
+    display: inline-block;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+}
+
+.btn-effect5 .icon {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 5a */
+.btn-effect5a .icon {
+	left: 0;
+	top: -100%;
+}
+
+.btn-effect5a:hover .icon {
+	top: 0;
+}
+
+#last_section{
+  width: 100vw;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.block{
+  position: absolute;
+  z-index: 99;
+  top:22%;
+  width: 75%;
+}
+.circle-text {
+  width:100%;
+}
+.circle-text:after {
+ content: "";
+ display: block;
+ width: 100%;
+ height:0;
+ padding-bottom: 100%;
+ background: #ff6a00;
+ -moz-border-radius: 50%;
+ -webkit-border-radius: 50%;
+ border-radius: 50%;
+ box-shadow: 1px 2px grey, 3px 3px #848484, 4px 4px #919191;
+ }
+ .circle-text div  {
+   float:left;
+   width:100%;
+   padding-top:60%;
+   line-height:0.8em;
+   text-align:center;
+   color:white;
+   font-weight: 400;
+   font-size: 2vmax;
+   }
+   .circle-text p{
+     text-shadow: 1px 1px grey , 2px 2px #919191;
+   }
+
+   .circle-text #circle-text-symbol{
+     top: 10%;
+     left:40%;
+     position: absolute;
+     color: black;
+   }
+
+   .circle-text #circle-text-symbol2{
+     top: 15%;
+     left:35%;
+     position: absolute;
+     color: black;
+   }
+
+   .circle-text #circle-text-symbol3{
+     top: 15%;
+     left:30%;
+     position: absolute;
+     color: black;
+   }
+
+   .footer{
+     position: absolute;
+     z-index: 99;
+     color: white;
+     top:93.5%;
+     font-size: 20px;
+   }
+   .footerbrand a{
+     color: yellow;
+     text-decoration: none;
+   }
+   .footerbrand a:hover{
+     text-decoration: none;
+     color: white;
+   }
+   .footerbrand a:active{
+     text-decoration: none;
+     color: #fffbb2;
+   }
+   .footerbrand a:visited {
+     text-decoration: none;
+   }
+   .footerlink{
+     position: absolute;
+     z-index: 99;
+     color: white;
+     top:93.5%;
+     margin-left: 25%;
+     font-weight: 300;
+     font-size: 20px;
+   }
+   .footerlink a{
+     color:white
+   }
+   .footerlink a:hover{
+     text-decoration: none;
+     color: yellow;
+   }
+   .footerlink a:active{
+     text-decoration: none;
+     color: #fffbb2;
+   }
+   .footerlink a:visited {
+     text-decoration: none;
+   }
+   .socialbtn{
+     position: absolute;
+     z-index: 99;
+     top:92%;
+     left:60%;
+   }
+   .socialbtn .btn-social-icon{
+     background-color:yellow;
+     color:black;
+   }
+
+   .socialbtn .btn-social-icon:hover{
+     color:grey;
+   }
+
+   .socialbtn .btn-social-icon:active {
+     background-color:black;
+   }
+
+/*Custom screen size to make the css responsive manually*/
+@media screen and (max-width: 1021px){
+  #third_section_caption2{
+    font: bold 7vmax arial;
+  }
+}
+@media screen and (max-width: 767px) {
+  #third_section_caption{
+    padding-left: 10%;
+  }
+  #third_section_caption2{
+    padding-left: 30%;
+  }
+  .btn-effect{
+    top:58vh;
+  }
+  .footer{
+    top:91%;
+  }
+  .footerlink{
+    margin-left: 23%;
+    top:91%;
+  }
+
+  .socialbtn{
+    top:90%;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .circle-text #circle-text-symbol{
+    font-size: 8vmax;
+    left:43%;
+    top:15%;
+  }
+
+  .circle-text #circle-text-symbol2{
+    font-size: 8vmax;
+  }
+
+  .circle-text #circle-text-symbol3{
+    font-size: 8vmax;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .circle-text:after {
+    width:120px;
+    height:120px;
+  }
+
+  .circle-text #circle-text-symbol{
+    font-size: 7vmax;
+    left:45%;
+    top:12%;
+  }
+
+  .circle-text #circle-text-symbol2{
+    font-size: 7vmax;
+    left:43%;
+  }
+
+  .circle-text #circle-text-symbol3{
+    font-size: 7vmax;
+    left:38%;
+  }
+  .circle-text p{
+    font-size: 3vmax;
+    text-indent: 10px;
+  }
+  .footer{
+    top:89%;
+  }
+  .footerlink{
+    margin-left: 21%;
+    top:89%;
+  }
+  .socialbtn{
+    top:87%;
+  }
+  div .btn-social-icon{
+    width: 30px;
+    height: 30px;
+  }
+  .fa-facebook{
+    margin-top: -10%;
+  }
+  .fa-instagram{
+    margin-top: -10%;
+  }
+
+}
+
+@media screen and (max-width: 530px){
+    #third_section_caption{
+      font: bold 6vmax arial;
+    }
+    #third_section_caption2{
+      font: bold 6vmax arial;
+      left: 2%;
+    }
+    .circle-text:after {
+      width:110px;
+      height:110px;
+    }
+    .circle-text p{
+      font-size: 2.5vmax;
+    }
+    .circle-text #circle-text-symbol{
+      font-size: 6vmax;
+      left:45%;
+    }
+    .circle-text #circle-text-symbol2{
+      font-size: 6vmax;
+      left:42%;
+    }
+    .circle-text #circle-text-symbol3{
+      font-size: 6vmax;
+      left:40%;
+    }
+    .footer{
+      top:89%;
+    }
+    .socialbtn{
+      top:86%;
+    }
+}
+/* Started from 479 pixels (phone size)
+ * the css style will work
+ */
+@media screen and (max-width: 479px) {
+
+  .navbar-collapse{
+    background-color: rgba(0,0,0,0.5);
+  }
+  #third_section_container{
+    width: 100vw;
+    height: 100vh;
+  }
+  /*In order to split the 2 colors of rectangle to diagonal
+   * the rotation is implemented and put yellow color
+   * vw --> 100% of the width of the viewport
+   * vh --> 100% of the height of the viewport
+  */
+  #third_section_container::before{
+    content:'';
+    border-top: 100vh solid transparent;
+    border-right: 100vw solid yellow;
+  }
+  #third_section_caption{
+    left:-8%;
+  }
+  .circle-text:after {
+    width:100px;
+    height:100px;
+  }
+  .circle-text p{
+    font-size: 12px;
+    line-height: 0.5em;
+  }
+  .circle-text #circle_caption{
+      margin-top:5px;
+  }
+  .footerlink{
+    margin-left: 19%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #third_section_caption{
+    font: bold 5vmax arial;
+  }
+  #third_section_caption2{
+    font: bold 5vmax arial;
+    left: 4%;
+  }
+  .btn-effect{
+    left:-10%;
+  }
+  .circle-text:after {
+    width:90px;
+    height:90px;
+  }
+  .circle-text div  {
+    width:120%;
+    }
+  .circle-text p{
+    text-indent: 13px;
+  }
+
+  .circle-text #circle_caption{
+      margin-top:5px;
+  }
+  .circle-text #circle-text-symbol{
+    font-size: 4.6vmax;
+    top:15%;
+  }
+  .circle-text #circle-text-symbol2{
+    font-size: 4.6vmax;
+    left:45%;
+
+  }
+  .circle-text #circle-text-symbol3{
+    font-size: 4.6vmax;
+    left:46%;
+  }
+  .footer{
+    top:87.5%;
+  }
+  .footerlink{
+    margin-left:20%;
+    top:88%;
+    font-size: 2.2vmax;
+  }
+  .socialbtn{
+    top:84%;
+  }
+}
+
+@media screen and (max-width: 385px) {
+
+  #third_section_caption{
+    font: bold 4vmax arial;
+  }
+  #third_section_caption2{
+    font: bold 4vmax arial;
+    left: 6%;
+  }
+  .btn-effect{
+    left:-14%;
+  }
+  .circle-text div  {
+    padding-top:40%;
+    width: 130%;
+    }
+  .circle-text:after {
+      width:80px;
+      height:80px;
+  }
+  .circle-text p{
+    text-indent: 0px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .circle-text #circle-text-symbol{
+    display:none;
+  }
+  .circle-text #circle-text-symbol2{
+    display:none;
+  }
+  .circle-text #circle-text-symbol3{
+    display:none;
+  }
+  .footer{
+    top:87%;
+  }
+  .footerlink{
+    margin-left:20%;
+    top:88%;
+    font-size:2vmax;
+  }
+  .socialbtn{
+
+  }
+  div .btn-social-icon{
+    width: 25px;
+    height: 25px;
+    font-size: 2vmax;
+  }
+  .fa-facebook{
+    margin-top: -14%;
+  }
+  .fa-instagram{
+    margin-top: -14%;
+  }
+}
+
+@media screen and (max-width: 330px){
+  #third_section_caption{
+    font: bold 3vmax arial;
+  }
+  #third_section_caption2{
+    font: bold 3vmax arial;
+    left: 6%;
+  }
+  .circle-text:after {
+      width:120%;
+      height:0;
+  }
+  .circle-text div  {
+    padding-top:25%;
+    margin-left: -5%;
+
+    }
+  .circle-text p{
+    font-size: 1.5vmax;
+    font-weight: 200;
+    line-height: 10%;
+  }
+  .footerlink{
+    margin-left:24%;
+  }
+  .socialbtn{
+    left:70%;
+  }
+  .btn-facebook{
+    margin-left: -8px;
+  }
+
+}
+
+
+@media screen and (max-width: 310px){
+  .circle-text div  {
+    font-weight: 100;
+    }
+    div .btn-social-icon{
+      width: 17px;
+      height: 23px;
+      font-size: 2vmax;
+    }
+  .socialbtn{
+    left:75%;
+    }
+    .fa-facebook{
+      margin-top: -16%;
+    }
+    .fa-instagram{
+      margin-top: -16%;
+    }
+}

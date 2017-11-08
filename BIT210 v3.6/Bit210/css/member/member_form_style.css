@@ -1,0 +1,134 @@
+html{
+	height: 100%;
+}
+body{
+	margin-top: 0%;
+}
+.error {
+    color: #990000;
+}
+.navbar{
+	height: 50%;
+	width: 100%;
+	z-index: 1;
+}
+#img_logo_trainer{
+  position: absolute;
+  width:30%;
+  height:40%;
+  left:37%;
+	top:12%;
+}
+.box{
+	top:190px;
+	left: 20%;
+	margin-bottom: 5%;
+	background-color: white;
+	border: 2px solid #848484;
+	border-radius: 5px;
+	width: 50%;
+	z-index: 99;
+	box-shadow: 1px 2px grey, 2px 3px #848484, 4px 4px #919191;
+}
+.arrow {
+color: #333;
+text-decoration: none;
+font-size: 150%;
+}
+.glyphicon-arrow-left{
+	top: 25px;
+	left:20px;
+}
+.box h1{
+	text-align: center;
+}
+.midBox{
+	text-align: center;
+	font-size: 20px;
+
+}
+.form-group select{
+	color:#b8b9ba;
+	font-size: 1.4vmax;
+}
+.form-control::placeholder{
+	color: #b8b9ba;
+	font-size:
+}
+.midBox a{
+	width: 50%;
+	height: 55%;
+	font-size: 20px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.lsBox h3{
+	font-size: 1.5vmax;
+}
+.glyphicon{
+	width: 2%;
+}
+.form-group .input-lg::placeholder{
+	font-size: 1.4vmax;
+}
+
+/*Custom screen size to make the css responsive manually*/
+@media screen and (max-width: 900px) {
+	.box{
+		left:14%;
+		width: 60%;
+		z-index: 99;
+	}
+}
+@media screen and (max-width: 767px) {
+	#img_logo_trainer{
+	  width:40%;
+	  height:34%;
+		top:18%;
+		left:32%;
+	}
+	.box{
+		left:14%;
+		width: 60%;
+	}
+}
+@media screen and (max-width: 730px) {
+	.box h1{
+		font-size: 4vmax;
+	}
+	.box{
+		width: 60%;
+	}
+}
+@media screen and (max-width: 540px) {
+	.box{
+		left:8%;
+		width: 70%;
+	}
+}
+/* Started from 479 pixels (phone size)
+ * the css style will work
+ */
+@media screen and (max-width: 479px) {
+	.box h1{
+		font-size: 3vmax;
+	}
+	.box{
+		left:3%;
+		width: 80%;
+	}
+}
+@media screen and (max-width: 402px) {
+
+	#img_logo_trainer{
+		position: absolute;
+		width:45%;
+		height:34%;
+		top:18%;
+		left:28%;
+	}
+	.glyphicon-arrow-left{
+		top: 15px;
+		left:10px;
+	}
+}

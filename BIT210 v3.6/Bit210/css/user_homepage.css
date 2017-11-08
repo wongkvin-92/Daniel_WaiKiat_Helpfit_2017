@@ -1,0 +1,601 @@
+
+/*Style Of top Navbar*/
+#navbar{
+ margin-top:2%;
+ position: relative;
+ z-index: 99;
+}
+.navbar-fixed-top{
+  height:100px;
+}
+#navbar a{
+ font-size:2.1vmax;
+ color: white;
+ font-weight: 600;
+ margin-left: 10%;
+}
+#navbar a:hover{
+ color: #b7b7b7;
+}
+.dropdown-menu{
+  background-color: black;
+}
+.dropdown-menu li a{
+  background-color: black;
+}
+#navbar .dropdown-menu a:hover{
+  background: rgba(0,0,0,0);
+}
+/*Image size of the top left round photo in the sidebar*/
+#img_logo_trainer{
+  position: absolute;
+  left:-5px;
+  width:270px;
+  height:90px;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+
+    color: #999;
+}
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/*End ofStyle of Top Navbar*/
+
+/*Style of Sidebar*/
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    perspective: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height:100%;
+    background: #d8d8d8;
+    color: #595959;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: bottom left;
+}
+/*when the sidebar is being hide or show, there will be transition
+like moving from left to right or right to left with curving in and out
+*/
+#sidebar.active {
+    margin-left: -250px;
+    transform: rotateY(100deg);
+}
+
+/*Sidebar User Info*/
+#sidebar .sidebar-header {
+    padding: 20px;
+}
+.sidebar-header{
+-webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+/*To implement the button for the hover of the
+  round image on the top left in the sidebar
+*/
+.hidden-btn-image{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  padding-left:300px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.img-circle{
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.img-sidebar-header:hover .img-circle {
+  opacity: 0.3;
+}
+.img-sidebar-header:hover .hidden-btn-image {
+  opacity: 1;
+}
+/*End of hover for a button shown in the round image*/
+/*Style of the name of the trainer and position*/
+.userinfo-title {
+  text-align: center;
+  margin-top: 20px;
+}
+.userinfo-title-name{
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.userinfo-title-job{
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+}
+/*style of the tabs on the sidebar*/
+#sidebar ul.components {
+  padding: 20px 30px;
+}
+/*Style for the hover of the menu tabs
+  with adding on transition to have
+  zoom in effect
+*/
+ul.components li:hover{
+background: black;
+-webkit-transform: scale(1.3);
+-ms-transform: scale(1.3);
+transform: scale(1.3);
+z-index: 99;
+}
+/*Style for the hover of the submenu tabs
+  with adding on transition to have
+  zoom in effect
+*/
+ul.components .hoversub:hover{
+background: black;
+-webkit-transform: scale(0.79);
+-ms-transform: scale(0.79);
+transform: scale(0.79);
+}
+/*the animation loads with bounce in effect
+  when the page is executing
+*/
+ul.components li{
+  -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+ul .menu-spacing {
+  margin-bottom: 20px;
+}
+/*the style of line to separate the round photo and the tab in the sidebar*/
+.line-sidebar{
+  margin-top: -10%;
+  width:100%;
+}
+/*style for the entire menu tabs*/
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    text-decoration: none;
+}
+/*Hover effect of the menu tabs*/
+#sidebar ul li:hover {
+      color: white;
+    opacity: 1.2;
+}
+/*Hover effect on the sub menu tabs*/
+.hoversub li a:hover{
+    color: #999999;
+    background-color: #efefef;
+}
+/*color of the words of the sub menu tabs*/
+.hoversub li a{
+    color: #595959;
+}
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #a0a0a0;
+    opacity: 0.7;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #efefef;
+}
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+/*End of Style of the Sidebar*/
+
+/*Content of the trainer homepage style*/
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    width:100%;
+    transition: all 0.3s;
+}
+/*the style for the button to hide or show the sidebar */
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+
+    position:relative;
+    /*
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; */
+    background-color: #EDE89A;
+    /*to give the shadow at the button to hide or show sidebar*/
+      box-shadow:
+     -6px -6px 8px -4px #fafe76,
+      6px -6px 8px -4px #fe9f32,
+      6px 6px 8px -4px #ffbf66,
+      6px 6px 8px -4px #ff3f3f;
+    border:3px dashed #F7EEEE;
+     border-radius:5px;
+}
+#sidebarCollapse.active {
+  border-color:black;
+}
+#sidebarCollapse:focus {outline:0;}
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+    opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+#sidebarCollapse.active span {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+}
+
+/*Animation pop out content*/
+
+.content-layout {
+    animation: popout .8s ease;
+    -webkit-animation: popout 1s ease;
+    border: 10px solid #e5e5cc;
+    border-right: 1px white;
+    border-radius: 5px 20px 5px;
+    margin-top: 10px;
+}
+.inner-row-content{
+  padding:20px;
+}
+
+/*Pagination style*/
+.pagination {
+display: block;
+width: 75%;
+text-align: center;
+top: 10%;
+}
+.pagination:after {
+content: '';
+clear: both;
+}
+.pagination-button {
+display: inline-block;
+padding: 5px 10px;
+border: 1px solid #e0e0e0;
+background-color: #eee;
+color: #333;
+cursor: pointer;
+transition: background 0.1s, color 0.1s;
+}
+.pagination-button:hover {
+background-color: #ddd;
+color: #3366cc;
+}
+.pagination-button.active {
+background-color: #bbb;
+border-color: #bbb;
+color: #3366cc;
+}
+.pagination-button:first-of-type {
+border-radius: 18px 0 0 18px;
+}
+.pagination-button:last-of-type {
+border-radius: 0 18px 18px 0;
+}
+
+.popout:hover
+{
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+  background-color: #ffff91;
+  cursor: pointer;
+}
+.popout .btn-primary:hover{
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  z-index: 99;
+  margin-left:20px;
+}
+.popout{
+  border-right: 1px dashed black;
+}
+
+/*Style of Footer*/
+footer {
+ width: 100%;
+ position: fixed;
+ background-color: black;
+ padding:20px;
+ left:0;
+ bottom:0;
+}
+.footer-hide-show{
+  display: none;
+}
+.footer-main{
+  margin-left:-8%;
+}
+.footerbrand a{
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+}
+.footerbrand a:hover{
+  text-decoration: none;
+  color: white;
+}
+.footerbrand a:active{
+  text-decoration: none;
+  color: #fffbb2;
+}
+.footerbrand a:visited {
+  text-decoration: none;
+}
+.footerlink{
+  position: absolute;
+  color: white;
+  left: 35%;
+  font-size: 20px;
+  font-weight: 300;
+}
+.footerlink a{
+  color:white
+}
+.footerlink a:hover{
+  text-decoration: none;
+  color: yellow;
+}
+.footerlink a:active{
+  text-decoration: none;
+  color: #fffbb2;
+}
+.footerlink a:visited {
+  text-decoration: none;
+}
+.socialbtn{
+  position: absolute;
+  left: 90%;
+}
+.socialbtn .btn-social-icon{
+  background-color:yellow;
+  color:black;
+}
+
+.socialbtn .btn-social-icon:hover{
+  color:grey;
+}
+
+.socialbtn .btn-social-icon:active {
+  background-color:black;
+}
+/*End of Style of the Footer*/
+
+/*To Customize the animation and give them a name*/
+@keyframes popout {
+    from{transform:scale(0)}
+    80%{transform:scale(1.2)}
+    to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.2)}
+    to{-webkit-transform:scale(1)}
+}
+
+/*Create animation with the keyframe to customize it*/
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 5deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*give the animation a name*/
+.tada {
+  animation-name: tada;
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+/*End of the Customization of Animation*/
+
+
+/*Custom screen size to make the css responsive manually*/
+@media (max-width: 1199px) {
+  #content {
+      margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
+  nav .pagination{
+    left:74%;
+    bottom: 4%;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 768px) {
+#navbar {
+  margin-top: 7%;
+  color:white;
+  background:black;
+}
+  .wrapper {
+      margin-top: 100px;
+  }
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(90deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+    #img_logo_trainer{
+      z-index: 99;
+    }
+    .footer-main{
+      margin-left: 3%;
+    }
+    .footerlink{
+      left: 35%;
+    }
+    .socialbtn{
+      position: absolute;
+      left: 80%;
+    }
+
+}
+@media (max-width: 540px) {
+  .footerlink{
+    left: 30%;
+  }
+}
+@media (max-width: 440px) {
+  .footerlink{
+    left: 25%;
+  }
+}
+@media (max-width: 402px) {
+  #navbar {
+    margin-top: 13%;
+
+  }
+  div .btn-social-icon{
+    width: 25px;
+    height: 25px;
+    font-size: 2vmax;
+  }
+  .footerlink{
+    top:30%;
+    left:30%;
+    font-size:2vmax;
+  }
+  .socialbtn{
+    left: 80%;
+  }
+  .btn-facebook{
+    margin-left: -8px;
+  }
+  .fa-facebook{
+    margin-top: -18%;
+  }
+  .fa-instagram{
+    margin-top: -18%;
+  }
+}
