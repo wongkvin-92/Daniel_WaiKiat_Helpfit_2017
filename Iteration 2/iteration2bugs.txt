@@ -1,0 +1,31 @@
+submitted review for Personal 1, review recorded BUT after that I can still review Personal 1 but not Group 1
+-check review working fine (shows reviews)
+
+for himu, review button only homepage working, table cannot review. BUT after i submitted a review on Personal 1, the problem has reversed to same as daniel.
+for daniel, is opposite problem.
+
+average rating is showing fine on homepage and also register session table
+
+AFTER FIX
+trainingsession count does not reset to 0 after registeredtraining is deleted.
+
+personal history passed the date cannot check review
+since check review condition depend on 'completed' and not date
+
+for member, homepage cannot review (disabled), but history can review (even before reviewing any session)
+
+after review personal 1, still cannot review a different session group 1
+
+after submitting more reviews, check review buttons disappeared.
+
+
+AFTER ERROR FIX
+
+training history table (personal) cannot edit when session is still in progress
+-but after the session is over, can edit (enabled together with check review button)
+
+training history table (group) can edit
+
+for training history table (group), group 1 suppose to have 2 reviews, and group 2 suppose to have 1 review.
+-but group 1 is showing the table from group 2.
+
